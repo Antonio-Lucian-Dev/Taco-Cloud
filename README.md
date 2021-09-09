@@ -11,3 +11,6 @@
 - Lombok
 - Spring Security
 - Thymeleaf
+
+# Schema
+![alt text](https://github.com/Antonio-Lucian-Dev/Taco-Cloud/blob/main/src/main/resources/img/schema-design.png?raw=true)
