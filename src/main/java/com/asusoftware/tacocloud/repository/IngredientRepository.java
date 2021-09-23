@@ -1,9 +1,10 @@
 package com.asusoftware.tacocloud.repository;
 
 import com.asusoftware.tacocloud.model.Ingredient;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface IngredientRepository {
-    Iterable<Ingredient> findAll();
-    Ingredient findOne(String id);
-    Ingredient save(Ingredient ingredient);
+@Repository
+public interface IngredientRepository extends CrudRepository<Ingredient, Long> {
+
 }
