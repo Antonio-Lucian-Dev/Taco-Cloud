@@ -82,7 +82,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/login")
                 .loginProcessingUrl("/authenticate")
                 .usernameParameter("user")
-                .passwordParameter("pwd");
+                .passwordParameter("pwd")
+                .and()
+                .logout()
+                .logoutSuccessUrl("/"); // Specifica dove portare l'utente dopo il logout, per default Security lo riporta nella login page, in questo caso lo portiamo nella home
 
         /* Se vogliamo permettere agli utenti con il role di user di creare i taco on Tuesday
 
