@@ -76,7 +76,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/design", "/orders")
                 .access("hasRole('ROLE_USER')")
                 .antMatchers("/", "/**")
-                .access("permitAll");
+                .access("permitAll")
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .loginProcessingUrl("/authenticate")
+                .usernameParameter("user")
+                .passwordParameter("pwd");
 
         /* Se vogliamo permettere agli utenti con il role di user di creare i taco on Tuesday
 
